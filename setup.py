@@ -36,4 +36,9 @@ setup(name             = 'playsound',
                           'Topic :: Multimedia :: Sound/Audio :: Players',
                           'Topic :: Multimedia :: Sound/Audio :: Players :: MP3'],
       keywords         = 'sound playsound music wave wav mp3 media song play audio',
-      py_modules       = ['playsound'])
+      py_modules       = ['playsound'],
+      entry_points     = {
+          'console_scripts': [
+              'playsound = playsound:main',
+          ]
+      })

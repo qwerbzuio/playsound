@@ -1,3 +1,5 @@
+import sys
+
 class PlaysoundException(Exception):
     pass
 
@@ -123,3 +125,11 @@ else:
     playsound = _playsoundNix
 
 del system
+
+
+def main():
+    if len(sys.argv) <= 1:
+        print("Please specify a sound file to play")
+        exit(1)
+    filename = sys.argv[1]
+    playsound(filename)
